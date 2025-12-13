@@ -17,7 +17,9 @@ export default function Navbar() {
               />
             </div>
             <span className="text-lg sm:text-xl md:text-2xl font-medium">
-              <span className="text-pink-600">Sprout</span>
+              <span className="bg-gradient-to-r from-pink-300 via-blue-300 to-indigo-500 inline-block text-transparent bg-clip-text">
+                Sprout
+              </span>
               <span className="text-blue-500">AI</span>
             </span>
           </div>
