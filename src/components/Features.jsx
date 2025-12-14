@@ -1,23 +1,53 @@
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { nightOwl } from "react-syntax-highlighter/dist/esm/styles/hljs";
+
 const features = [
   {
     title: "Ai Code Completion",
     description:
       "Intelligent code suggestions pwoered by advanced AI algorithms to help you write code faster and with fewer errors.",
-    image: "code-completion",
+    codeSnippet: `async function handleSubmit(payload) {
+  const response = await fetch("/api/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  // AI completed the logic
+  if (!response.ok) throw new Error("Submission failed");
+
+  const data = await response.json();
+  return data;
+}`,
     imagePosition: "left",
   },
   {
     title: "Automated Testing",
     description:
       "Generate comprehensive unit and integration tests automatically to ensure your code is robust and reliable.",
-    image: "testing",
-    imagePosition: "right",
+    codeSnippet: `import { describe, it, expect } from "vitest";
+import { handleSubmit } from "./submit";
+
+describe("handleSubmit", () => {
+  it("should return API response data", async () => {
+    const result = await handleSubmit();
+    expect(result).toHaveProperty("success", true);
+  });
+});`,
   },
   {
     title: "Smart Debugging",
     description:
       "Identify and fix bugs quickly with AI-powered debugging tools that analyze your code and suggest solutions.",
-    image: "debugging",
+    codeSnippet: `async function handleSubmit() {
+  try {
+    const response = await fetch("/api/submit");
+    if (!response.ok) throw new Error("Request failed");
+    return await response.json();
+  } catch (error) {
+    console.error("AI Insight:", error.message);
+  }
+}`,
     imagePosition: "left",
   },
 ];
@@ -39,6 +69,46 @@ export default function Features() {
               Workflow
             </span>
           </h2>
+        </div>
+        <div className="space-y-16 sm:space-y-20 lg:space-y-32">
+          {features.map((features, key) => (
+            <div key={key} className="">
+              <div>
+                <div>
+                  {/* IDE INTERFACE */}
+                  <div className="bg-gray-950 rounded-lg p-3 sm:p-4 font-mono text-xs sm:text-sm">
+                    <div className="flex items-center space-x-1 sm:space-x-2 mb-3 sm:mb-4">
+                      <div className="flex items-center space-x-1 sm:space-x-2">
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-red-500" />
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-yellow-500" />
+                        <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-green-500" />
+                      </div>
+                      <span className="text-gray-400 ml-2 sm:ml-4 text-xs sm:text-sm">
+                        {features.title}
+                      </span>
+                    </div>
+                    <div>
+                      <SyntaxHighlighter
+                        language="javascript"
+                        style={nightOwl}
+                        customStyle={{
+                          margin: 0,
+                          borderRadius: "8px",
+                          fontSize: "0.75rem",
+                          lineHeight: "1.4",
+                          height: "100%",
+                          border: "1px solid #3c3c3c",
+                        }}
+                        wrapLines={true}
+                      >
+                        {features.codeSnippet}
+                      </SyntaxHighlighter>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
