@@ -1,3 +1,5 @@
+import { Star } from "lucide-react";
+
 const plans = [
   {
     name: "Starter",
@@ -78,9 +80,38 @@ export default function Pricing() {
               className={`relative bg-slate-900/50 backdrop-blur-sm border rounded-xl sm:rounded-2xl p-6 sm:p-8 transition-all duration-300 overflow-visible group flex flex-col h-full ${
                 plan.mostPopular
                   ? "border-blue-500 shadow-2xl shadow-blue-500/20 lg:scale-105"
-                  : ""
+                  : "border-slate-800 hover:border-slate-700"
               }`}
-            ></div>
+            >
+              {plan.mostPopular && (
+                <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2 z-10">
+                  <div className="flex items-center space-x-1 px-3 sm:px-4 py-1 sm:py-1.5 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full text-sx sm:text-sm font-semibold shadow-lg">
+                    <Star className="w-3 h-3 sm:w-3 sm:h-3 fill-white" />
+                    <span>Most Popular</span>
+                  </div>
+                </div>
+              )}
+
+              <div className="text-center mb-6 sm:mb-8 ">
+                <h3 className="text-xl sm:text-2xl font-bold mb-2">
+                  {plan.name}
+                </h3>
+                <p className="text-gray-400 text-sx sm:text-sm mb-3 sm:mb-4">
+                  {plan.description}
+                </p>
+                <div className="flex items-baseline justify-center">
+                  <span
+                    className="text-3xl sm:text-4xl text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text
+                  text-transparent"
+                  >
+                    ${plan.price}
+                  </span>
+                  <span className="text-gray-400 ml-1 sm:ml-2 text-sm sm:text-base">
+                    /month
+                  </span>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
       </div>
