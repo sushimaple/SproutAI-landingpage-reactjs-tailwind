@@ -49,7 +49,10 @@ export default function Hero() {
               <span className="bg-gradient-to-b from-blue-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent block mb-1 sm:mb-2">
                 Build Better
               </span>
-              <span>With Sprout AI</span>
+              <span>With </span>
+              <span className="bg-gradient-to-r from-pink-300 via-blue-300 to-indigo-500 inline-block text-transparent bg-clip-text">
+                Sprout AI
+              </span>
             </h1>
 
             <p className="text-md sm:text-base lg:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-8 animate-in slide-in-from-bottom duration-700 delay-200 leading-relaxed">
@@ -137,6 +140,9 @@ export default function Hero() {
                         lineHeight: "1.4",
                         height: "100%",
                         border: "1px solid #3c3c3c",
+                        wordWrap: "break-word",
+                        whiteSpace: "pre-wrap",
+                        textAlign: "left",
                       }}
                     >
                       {codeExamples[activeTab]}
