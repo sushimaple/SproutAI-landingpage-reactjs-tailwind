@@ -57,7 +57,7 @@ export const codeExamples = {
     const [open, setOpen] = useState(false);
 
     return (
-        <nav className="fixed top-0 w-full bg-slate-950 text-white p-4 flex justify-between">
+        <nav className="fixed top-0 w-full bg-slate-950 text-white p-4 flex">
             <span className="font-bold">
                 SproutAI
             </span>
