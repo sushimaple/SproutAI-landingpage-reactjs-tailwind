@@ -18,7 +18,7 @@ const testimonials = [
     role: "CTO",
     image: "https://images.pexels.com/photos/7653469/pexels-photo-7653469.jpeg",
     content:
-      "From idea to production, this AI app makes complex coding tasks feel effortless.",
+      "From idea to production, this AI app makes complex coding tasks feel effortless, streamlining development with smart suggestions and reliable results at every step.",
   },
 ];
 
