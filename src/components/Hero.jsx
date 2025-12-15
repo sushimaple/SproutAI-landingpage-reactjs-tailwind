@@ -56,10 +56,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-md sm:text-base lg:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 mb-6 sm:mb-8 animate-in slide-in-from-bottom duration-700 delay-200 leading-relaxed">
-              Accelerate your development workflow with intelligent code
-              completion, automated testing, and smart debugging powered by
-              advanced AI. Ship production-ready code up to 10× faster with
-              precision, reliability, and confidence.
+              Accelerate your development workflow with AI-driven code completion, automated testing, and intelligent debugging. Leverage advanced machine intelligence to deliver production-ready software up to 10× faster—while maintaining precision, reliability, and engineering-grade confidence.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 mb-8 mb:12 animate-in slide-in-from-bottom duration-700 delay-300">
