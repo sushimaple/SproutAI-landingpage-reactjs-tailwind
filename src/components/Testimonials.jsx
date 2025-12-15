@@ -4,7 +4,7 @@ const testimonials = [
     role: "Teach Lead",
     image: "https://images.pexels.com/photos/7652509/pexels-photo-7652509.jpeg",
     content:
-      "Clean, fast, and surprisingly accurate. SproutAI has transformed my workflow.",
+      "Clean, fast, and surprisingly accurate—SproutAI has transformed my workflow by helping me build, iterate, and ship features faster with far less friction than before.",
   },
   {
     name: "Sarah Williams",
