@@ -83,7 +83,7 @@ export default function Pricing() {
                   : "border-slate-800 hover:border-slate-700"
               }`}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none rounded-lg" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-full -translate-y-full group-hover:translate-x-0 group-hover:translate-y-0 pointer-events-none rounded-xl sm:rounded-2xl" />
               {plan.mostPopular && (
                 <div className="absolute -top-2 sm:-top-3 left-1/2 transform -translate-x-1/2 z-10">
                   <div className="flex items-center space-x-1 px-3 sm:px-4 py-1 sm:py-1.5 bg-gradient-to-b from-blue-500 to-cyan-500 rounded-full text-sx sm:text-sm font-semibold shadow-lg">
@@ -128,11 +128,10 @@ export default function Pricing() {
                 ))}
               </ul>
               <button
-                className={`w-full py-2.5 sm:py-3 px-4 sm:px6 rounded-lg font-semibold transition-all duration-33 mt-auto hover:scale-102 cursor-pointer text-sm sm:text-base ${
+                className={`w-full py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg font-semibold transition-all duration-300 mt-auto hover:scale-[1.02] cursor-pointer text-sm sm:text-base ${
                   plan.mostPopular
-                    ? "bg-gradient-to-b from-blue-500 to-cyan-500"
+                    ? "bg-gradient-to-b from-blue-500 to-cyan-500 hover:opacity-90"
                     : "bg-white/5 border border-white/10 hover:bg-white/10"
-                }
                 }`}
               >
                 Get Started
